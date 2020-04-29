@@ -1,6 +1,6 @@
-<h1><%= @player1 %> vs <%= @player2 %></h1>
+<h1><%= $player1.name %> vs <%= $player2.name %></h1>
 <br>
-<h2><%= @player1 %> has <%= session[:player1points] %> points</h2>
+<h2><%= $player1.name %> has <%= session[:player1points] %> points</h2>
 <br>
-<h2><%= @player2 %> has <%= session[:player2points] %> points</h2>
+<h2><%= $player2.name %> has <%= session[:player2points] %> points</h2>
 <a href="/attack" id="attack">Attack</a>

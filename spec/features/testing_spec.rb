@@ -9,8 +9,8 @@ end
 feature "view hit points" do
   scenario "see players hitpoints as 0 on load" do
     sign_in_and_play
-    expect(page).to have_content ("John has 0 points")
-    expect(page).to have_content ("Kate has 0 points")
+    expect(page).to have_content ("John has 50 points")
+    expect(page).to have_content ("Kate has 50 points")
   end
 end
 
