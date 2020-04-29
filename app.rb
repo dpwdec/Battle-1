@@ -17,6 +17,8 @@ class Battle < Sinatra::Base
   end
 
   get "/play" do
+    session[:player1points] = 0
+    session[:player2points] = 0
     @player1 = session[:player1]
     @player2 = session[:player2]
     erb(:play)
@@ -24,3 +26,6 @@ class Battle < Sinatra::Base
 
   run! if app_file == $0
 end
+
+
+
