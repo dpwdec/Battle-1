@@ -19,4 +19,11 @@ describe Player do
       subject.attack(enemy_player)
     end
   end
+
+  describe '#receive_damage' do
+    it 'reduces player hitpoints by 10' do
+      subject = described_class.new('John')
+      expect { subject.receive_damage }.to change { subject.hitpoints }.by(-10)
+    end
+  end
 end

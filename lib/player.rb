@@ -12,4 +12,7 @@ class Player
     enemy.receive_damage
   end
 
+  def receive_damage
+    @hitpoints -= 10
+  end
 end
