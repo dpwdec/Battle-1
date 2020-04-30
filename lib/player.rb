@@ -8,4 +8,8 @@ class Player
     @hitpoints = 50
   end
 
+  def attack(enemy)
+    enemy.receive_damage
+  end
+
 end
