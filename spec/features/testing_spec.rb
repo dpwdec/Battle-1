@@ -30,3 +30,17 @@ feature "attack player 2" do
     expect(page).to have_content ("Kate has 40 points")
   end
 end
+
+feature 'displays player turns' do
+  scenario 'its player 1s turn' do
+    sign_in_and_play
+    expect(page).to have_content("It's John's turn")
+  end
+
+  scenario 'its player 2s turn' do
+    sign_in_and_play
+    click_button("attack")
+    click_button("ok")
+    expect(page).to have_content("It's Kate's turn")
+  end
+end

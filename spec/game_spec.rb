@@ -19,12 +19,23 @@ describe Game do
     end
   end
 
+  describe '#current_player' do
+    it 'returns player 1 as the current player' do
+      expect(game.current_player).to eq player_1
+    end
+  end
+
   describe '#attack' do
     it 'makes victim receive damage' do
-      attacker = double()
-      victim = double()
-      expect(victim).to receive(:receive_damage)
-      subject.attack(attacker, victim)
+      expect(player_2).to receive(:receive_damage)
+      subject.attack
+    end
+  end
+
+  describe '#switch_player' do
+    it 'switches to player_2' do
+      game.switch_player
+      expect(game.current_player).to eq player_2
     end
   end
 end
