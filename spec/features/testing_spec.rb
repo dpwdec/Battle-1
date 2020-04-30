@@ -14,10 +14,19 @@ feature "view hit points" do
   end
 end
 
+feature "displays attack action" do
+  scenario "displays attack text" do
+    sign_in_and_play
+    click_button("attack")
+    expect(page).to have_content ("John is attacking Kate")
+  end
+end
+
 feature "attack player 2" do
   scenario "attack player 2 by clicking on button" do
     sign_in_and_play
     click_button("attack")
+    click_button("ok")
     expect(page).to have_content ("Kate has 40 points")
   end
 end
