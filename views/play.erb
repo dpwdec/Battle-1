@@ -1,6 +1,8 @@
 <h1><%= $player1.name %> vs <%= $player2.name %></h1>
 <br>
-<h2><%= $player1.name %> has <%= session[:player1points] %> points</h2>
+<h2><%= $player1.name %> has <%= $player1.hitpoints %> points</h2>
 <br>
-<h2><%= $player2.name %> has <%= session[:player2points] %> points</h2>
-<a href="/attack" id="attack">Attack</a>
+<h2><%= $player2.name %> has <%= $player2.hitpoints %> points</h2>
+<form action="/attack" method="post">
+  <input type="submit" name="attack" value="Attack">
+</form>

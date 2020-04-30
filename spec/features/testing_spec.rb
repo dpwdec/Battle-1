@@ -17,7 +17,7 @@ end
 feature "attack player 2" do
   scenario "attack player 2 by clicking on button" do
     sign_in_and_play
-    click_link("attack")
-    expect(page).to have_content ("John is attacking")
+    click_button("attack")
+    expect(page).to have_content ("Kate has 40 points")
   end
 end
