@@ -2,7 +2,7 @@ class Game
 
   attr_reader :player_1, :player_2, :current_player
 
-  @@current_game
+  @@current_game = nil
 
   def self.current_game
     @@current_game

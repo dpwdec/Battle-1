@@ -1,9 +1,9 @@
-<h1>It's <%= Game.current_game.current_player.name %>'s turn</h1>
-<h1><%= Game.current_game.player_1.name %> vs <%= Game.current_game.player_2.name %></h1>
+<h1>It's <%= @game.current_player.name %>'s turn</h1>
+<h1><%= @game.player_1.name %> vs <%= @game.player_2.name %></h1>
 <br>
-<h2><%= Game.current_game.player_1.name %> has <%= Game.current_game.player_1.hitpoints %> points</h2>
+<h2><%= @game.player_1.name %> has <%= @game.player_1.hitpoints %> points</h2>
 <br>
-<h2><%= Game.current_game.player_2.name %> has <%= Game.current_game.player_2.hitpoints %> points</h2>
+<h2><%= @game.player_2.name %> has <%= @game.player_2.hitpoints %> points</h2>
 <form action="/attack" method="post">
   <input type="submit" name="attack" value="Attack">
 </form>

@@ -5,6 +5,10 @@ require './lib/game'
 class Battle < Sinatra::Base
   enable :sessions
 
+  before do
+    @game = Game.current_game
+  end
+
   get "/" do
     "value = " << session[:value].inspect
     erb(:form)
