@@ -1,4 +1,4 @@
-<%= $game.player_1.name %> is attacking <%= $game.player_2.name %>
+<%= Game.current_game.player_1.name %> is attacking <%= Game.current_game.player_2.name %>
 
 <form class="" action="/play" method="get">
   <input type="submit" name="ok" value="ok">
